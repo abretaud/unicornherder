@@ -22,14 +22,14 @@ parser.add_argument('-g', '--gunicorn-bin', default=None, metavar='GUNICORN_BIN'
                     help='path to a specific gunicorn to manage')
 parser.add_argument('-p', '--pidfile', metavar='PATH',
                     help='Path to the pidfile that unicorn will write')
-parser.add_argument('-t', '--timeout', default=30, type=int, metavar='30', dest='boot_timeout',
+parser.add_argument('-t', '--timeout', default=180, type=int, metavar='30', dest='boot_timeout',
                     help='Time to wait for new processes to daemonize themselves')
-parser.add_argument('--pidfile-timeout', default=5, type=int, metavar='5', dest='pidfile_timeout',
+parser.add_argument('--pidfile-timeout', default=180, type=int, metavar='5', dest='pidfile_timeout',
                     help='Time to wait for pidfile to be written after daemonization')
 parser.add_argument('-o', '--overlap', default=30, type=int, metavar='30',
                     dest='overlap',
                     help='Time to wait before killing old unicorns when reloading')
-parser.add_argument('--max-worker-wait-time', default=120, type=int, metavar='120',
+parser.add_argument('--max-worker-wait-time', default=180, type=int, metavar='120',
                     dest='max_worker_wait_time',
                     help='Time to wait for workers to come up again')
 parser.add_argument('-v', '--version', action='version', version=__version__)
