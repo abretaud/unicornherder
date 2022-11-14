@@ -26,7 +26,7 @@ parser.add_argument('-t', '--timeout', default=180, type=int, metavar='30', dest
                     help='Time to wait for new processes to daemonize themselves')
 parser.add_argument('--pidfile-timeout', default=180, type=int, metavar='5', dest='pidfile_timeout',
                     help='Time to wait for pidfile to be written after daemonization')
-parser.add_argument('-o', '--overlap', default=30, type=int, metavar='30',
+parser.add_argument('-o', '--overlap', default=180, type=int, metavar='30',
                     dest='overlap',
                     help='Time to wait before killing old unicorns when reloading')
 parser.add_argument('--max-worker-wait-time', default=180, type=int, metavar='120',

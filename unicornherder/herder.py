@@ -47,7 +47,7 @@ class Herder(object):
     """
 
     def __init__(self, unicorn='gunicorn', unicorn_bin=None, gunicorn_bin=None,
-                 pidfile=None, boot_timeout=180, pidfile_timeout=180, overlap=30, max_worker_wait_time=180, args=''):
+                 pidfile=None, boot_timeout=180, pidfile_timeout=180, overlap=180, max_worker_wait_time=180, args=''):
         """
 
         Creates a new Herder instance.
