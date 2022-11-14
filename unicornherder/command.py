@@ -29,6 +29,9 @@ parser.add_argument('--pidfile-timeout', default=5, type=int, metavar='5', dest=
 parser.add_argument('-o', '--overlap', default=30, type=int, metavar='30',
                     dest='overlap',
                     help='Time to wait before killing old unicorns when reloading')
+parser.add_argument('--max-worker-wait-time', default=120, type=int, metavar='120',
+                    dest='max_worker_wait_time',
+                    help='Time to wait for workers to come up again')
 parser.add_argument('-v', '--version', action='version', version=__version__)
 parser.add_argument('args', nargs=argparse.REMAINDER,
                     help='Any additional arguments will be passed to unicorn/'
